@@ -32,6 +32,13 @@ func main() {
 	fmt.Print(greetUser("Magesh", "Kuppan"))
 
 	// use divide function as above
+	var divideFunc func(int, int) (int, int)
+	divideFunc = func(num1, num2 int) (int, int) {
+		d := num1 / num2
+		q := num1 % num2
+		return d, q
+	}
+	fmt.Println(divideFunc(100, 23))
 }
 
 func getHello(userName string) string {
